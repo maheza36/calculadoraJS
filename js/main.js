@@ -1,7 +1,12 @@
+function myFunction() {
+    document.readyState;
+    recibirvalores();
+};
+
     var recibirvalores = function(){
     var intnum1 = prompt("Ingrese su primer numero");
     var intnum2 = prompt("Ingrese su segundo numero");
-    if (isNaN(intnum1) || isNaN(intnum2))
+    if (isNaN(intnum1) || isNaN(intnum2) || (intnum1 === "") || (intnum2 === ""))
     {
       console.log("no se ingreso un número valido");
     }
@@ -30,7 +35,7 @@
       case 'res':
       case 'RES':
       var resultado = restar(intnum1, intnum2);
-      console.log(resultado);
+
       break;
       //dividir
       case "dividir":
@@ -41,11 +46,13 @@
       case "division":
       case "DIVISION":
       var resultado = dividir(intnum1,intnum2);
-      console.log(resultado);
       break;
+      default:
+      var resultado = "Signo no definido"
     }
-    document.write("El resultado es de " + intnum1 + " " + operador + " " + intnum2 + " es: " + resultado);
-    javascript:location.reload();
+    console.log(resultado);
+    document.getElementById("demo").innerHTML = "El resultado es de " + intnum1 + " " + operador + " " + intnum2 + " es: " + resultado;
+    //javascript:location.reload();
 
   };
 
