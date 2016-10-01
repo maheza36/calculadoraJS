@@ -1,19 +1,19 @@
 function myFunction() {
     document.readyState;
     recibirvalores();
-};
+}
 
     var recibirvalores = function(){
-
+      var intnum1,intnum2;
       do{
-        var intnum1 = prompt("Ingrese su primer numero");
+        intnum1 = prompt("Ingrese su primer numero");
         if(isNaN(intnum1) || intnum1 === ""){
           console.log("no se ingreso un número valido");
         }
       }while(isNaN(intnum1) || intnum1 === "");
 
       do{
-        var intnum2 = prompt("Ingrese su segundo numero");
+        intnum2 = prompt("Ingrese su segundo numero");
         if(isNaN(intnum2) || intnum2 === ""){
           console.log("no se ingreso un número valido");
         }
@@ -30,6 +30,7 @@ function myFunction() {
   };
 
   var seleccionaroperacion = function(operador,intnum1,intnum2){
+    var resultado;
       switch(operador) {
         //restar
         case "restar":
@@ -41,7 +42,7 @@ function myFunction() {
         case 'MENOS':
         case 'res':
         case 'RES':
-          var resultado = restar(intnum1, intnum2);
+          resultado = restar(intnum1, intnum2);
         break;
 
         //dividir
@@ -52,7 +53,7 @@ function myFunction() {
         case "DIVIDE":
         case "division":
         case "DIVISION":
-          var resultado = dividir(intnum1,intnum2);
+          resultado = dividir(intnum1,intnum2);
         break;
 
         //sumar
@@ -63,7 +64,7 @@ function myFunction() {
         case '+':
         case 'mas':
         case 'MAS':
-          var resultado = sumar(intnum1, intnum2);
+          resultado = sumar(intnum1, intnum2);
         break;
 
         //multiplicar
@@ -76,11 +77,10 @@ function myFunction() {
         case 'POR':
         case 'mult':
         case 'MULT':
-          var resultado = multiplicar(intnum1, intnum2);
+          resultado = multiplicar(intnum1, intnum2);
         break;
-
         default:
-          var resultado = "Signo no definido";
+          resultado = "Signo no definido";
     }while(resultado === "Signo no definido");
 
     console.log(resultado);
