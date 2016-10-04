@@ -5,11 +5,43 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>Document</title>
-   <script src="./js/main.js" async>
-  </script>
+   <link  href="./css/main.css" rel="stylesheet">
+  <script src="./js/main.js" async></script>
+  <script src="./js/calculadora.js"></script>
  </head>
- <body onload="myFunction()">
-   <p id="demo"></p>
-    <button onclick="myFunction()">Calculadora</button>
+ <!--<body onload="myFunction()">-->
+ <body>
+   <!--<p id="demo"></p>-->
+    <!--<button onclick="myFunction()">Calculadora</button>-->
+    <main>
+      <section id="io">
+        <input type="text" id="input">
+        <input type="text" id="output" readonly="readonly"> 
+      </section>
+      <section id="controlpad">
+        <ul id="numbers">
+          <li><button>9</button></li>
+          <li><button>8</button></li>
+          <li><button>7</button></li>
+          <li><button>6</button></li>
+          <li><button>5</button></li>
+          <li><button>4</button></li>
+          <li><button>3</button></li>
+          <li><button>2</button></li>
+          <li><button>1</button></li>
+          <li><button>0</button></li>
+        </ul>
+        <ul id="operators">
+          <li><button>+</button></li>
+          <li><button>*</button></li>
+          <li><button>-</button></li>
+          <li><button>/</button></li>
+          <li><button>=</button></li>
+          <li><button>%</button></li>
+          <li><button>C</button></li>
+          <li><button>.</button></li>
+        </ul>
+      </section>
+    </main>
  </body>
  </html>
