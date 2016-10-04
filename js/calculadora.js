@@ -22,7 +22,9 @@ document.addEventListener("DOMContentLoaded",function(event){
   var output = document.getElementById("output");
   var controlpad = document.getElementById("controlpad");
   var buttons_operators = document.querySelectorAll("#operators button");
-  for(var key in buttons_operators){
-    buttons_operators[key].addEventListener("click",calculator.check_input());
+  var i=0;
+  
+  for(i=0; i<buttons_operators.length;i++){
+    buttons_operators[i].addEventListener("click",calculator.check_input);
   }
 });
