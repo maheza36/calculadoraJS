@@ -31,6 +31,12 @@ main{
   background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
   padding-bottom: 15px;
   border-radius: 10px 10px 10px 10px;
+  animation: mymove 3s;
+  position: relative;;
+}
+@keyframes mymove {
+    from {left: 100px;}
+    to {left: 200px;}
 }
 #controlpad{
   padding-top: 10px;
@@ -49,8 +55,8 @@ button{
   margin:1px;
   background: #3362e1;
   color:#ffffff;
-  border: none;
-
+  border-color: black;
+  border-radius: 5px 5px 5px 5px;
 }
 button:hover{
   background: #113392;
@@ -63,4 +69,9 @@ button:hover{
 #operators{
   text-align: right;
   width: 196px;
+}
+#clear{
+  position: absolute;
+  left: 217px;
+  top: 345px;
 }

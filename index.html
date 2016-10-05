@@ -15,8 +15,10 @@
     <!--<button onclick="myFunction()">Calculadora</button>-->
     <main>
       <section id="io">
-        <input type="text" id="input">
-        <input type="text" id="output" readonly="readonly"> 
+        <input type="text" id="input" placeholder="0">
+        <input type="text" id="output"
+        readonly="readonly" placeholder="Resultado">
+        <p id="error"></p>
       </section>
       <section id="controlpad">
         <ul id="numbers">
@@ -29,7 +31,9 @@
           <li><button>3</button></li>
           <li><button>2</button></li>
           <li><button>1</button></li>
+          <li><button>.</button></li>
           <li><button>0</button></li>
+
         </ul>
         <ul id="operators">
           <li><button>+</button></li>
@@ -38,8 +42,7 @@
           <li><button>/</button></li>
           <li><button>=</button></li>
           <li><button>%</button></li>
-          <li><button>C</button></li>
-          <li><button>.</button></li>
+          <li><button id="clear">C</button></li>
         </ul>
       </section>
     </main>
